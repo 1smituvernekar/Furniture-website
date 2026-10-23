@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './Checkout.css'
+import './CheckOut.css'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-const Checkout = () => {
+const CheckOut = () => {
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -95,4 +95,4 @@ const Checkout = () => {
   )
 }
 
-export default Checkout
+export default CheckOut
