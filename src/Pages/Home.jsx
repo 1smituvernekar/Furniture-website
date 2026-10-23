@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Header from '../Components/Header'
 import Discover from '../Components/Discover'
@@ -7,18 +8,18 @@ import Newsletter from '../Components/NewsLetter'
 import Footer from '../Components/Footer'
 import SofaPage from '../Components/SofaPage'
 
-const Hero = () => {
+const Home = () => {
   return (
     <div>
-        <Header/>
-        <Discover/>
-        <SofaPage/>
-        <ProductDisplay/>
-        <Collections/>
-        <Newsletter/>
-        <Footer/>
+      <Header />
+      <Discover />
+      <SofaPage />
+      <ProductDisplay />
+      <Collections />
+      <Newsletter />
+      <Footer />
     </div>
   )
 }
 
-export default Hero
+export default Home
