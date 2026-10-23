@@ -1,0 +1,405 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  min-height: 88px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+
+  background: rgba(250, 248, 243, 0.94);
+  border-bottom: 1px solid rgba(60, 48, 35, 0.1);
+  box-shadow: 0 5px 25px rgba(45, 35, 20, 0.035);
+
+  font-family: 'DM Sans', sans-serif;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  animation: navbarAppear 0.7s ease both;
+}
+
+/* Logo */
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #29251f;
+}
+
+.navbar-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.45s ease;
+}
+
+.navbar-logo:hover img {
+  transform: rotate(-8deg) scale(1.07);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.logo-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.logo-subtitle {
+  color: #968775;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2.1px;
+}
+
+/* Center links */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+}
+
+.navbar-links > a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 0;
+
+  color: #655d52;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+/* Animated underline */
+
+.navbar-links > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  border-radius: 10px;
+  background: #a47b50;
+  transition: width 0.35s ease;
+}
+
+.navbar-links > a:hover {
+  color: #a47b50;
+}
+
+.navbar-links > a:hover::after {
+  width: 100%;
+}
+
+.nav-number {
+  color: #b3a391;
+  font-size: 9px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links > a:hover .nav-number {
+  color: #a47b50;
+}
+
+/* Right side icons */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.nav-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: #39332b;
+  font-size: 19px;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-icon:hover {
+  color: #fffaf3;
+  background: #a47b50;
+  border-color: #a47b50;
+  transform: translateY(-3px);
+}
+
+.cart-dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #faf8f3;
+  border-radius: 50%;
+  background: #b77b47;
+}
+
+/* Mobile menu button */
+
+.navbar-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e5ded3;
+  border-radius: 50%;
+  background: transparent;
+  color: #39332b;
+  font-size: 27px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu:hover {
+  background: #a47b50;
+  color: white;
+  transform: rotate(5deg);
+}
+
+.mobile-nav-note {
+  display: none;
+}
+
+/* Entrance animation */
+
+@keyframes navbarAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Laptop and tablet */
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 0 4%;
+    gap: 20px;
+  }
+
+  .navbar-links {
+    gap: 22px;
+  }
+
+  .navbar-actions {
+    gap: 5px;
+  }
+
+  .logo-name {
+    font-size: 21px;
+  }
+}
+
+/* Mobile navigation */
+
+@media (max-width: 760px) {
+  .navbar {
+    min-height: 76px;
+    padding: 0 5%;
+    gap: 12px;
+  }
+
+  .navbar-logo {
+    gap: 9px;
+  }
+
+  .navbar-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo-name {
+    font-size: 20px;
+  }
+
+  .logo-subtitle {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .navbar-actions {
+    margin-left: auto;
+    gap: 2px;
+  }
+
+  .nav-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .cart-dot {
+    top: 5px;
+    right: 5px;
+  }
+
+  .navbar-menu {
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 12px 6% 24px;
+    background: #faf8f3;
+    border-bottom: 1px solid #e9e1d5;
+    box-shadow: 0 20px 30px rgba(45, 35, 20, 0.08);
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .navbar-links.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar-links > a {
+    padding: 17px 0;
+    border-bottom: 1px solid #e9e1d5;
+    font-size: 14px;
+  }
+
+  .navbar-links > a::after {
+    bottom: 8px;
+  }
+
+  .mobile-nav-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 20px;
+    color: #9b8b78;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+
+  .mobile-nav-note span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #a47b50;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 420px) {
+  .navbar {
+    min-height: 70px;
+    padding: 0 4%;
+    gap: 5px;
+  }
+
+  .navbar-logo {
+    gap: 7px;
+  }
+
+  .navbar-logo img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-name {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+  }
+
+  .logo-subtitle {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .navbar-actions {
+    gap: 0;
+  }
+
+  .nav-icon {
+    width: 30px;
+    height: 34px;
+    font-size: 16px;
+  }
+
+  .navbar-menu {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar *,
+  .navbar *::before,
+  .navbar *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

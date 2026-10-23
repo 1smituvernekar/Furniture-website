@@ -1,0 +1,22 @@
+.title{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+margin-bottom: -60px;
+
+}
+
+.title h3{
+    font-size: 52px;
+   
+    color: black;
+}
+
+.title h3 span{
+    color: #b88e2f;
+}
+@media (max-width:786px) {
+    .title h3{
+        font-size: 35px;
+    }
+}

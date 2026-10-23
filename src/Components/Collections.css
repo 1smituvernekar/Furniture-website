@@ -1,0 +1,240 @@
+
+.collections {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 45px 50px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* Section Heading */
+.collections h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 35px;
+  letter-spacing: -0.5px;
+}
+
+/* Product Grid */
+.collections .product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Product Card */
+.collections .product-card {
+  min-width: 0;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collections .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Product Image */
+.collections .product-image {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background: #f7f7f7;
+  border-radius: 9px;
+  margin-bottom: 14px;
+}
+
+/* Product Name */
+.collections .product-card h3 {
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+/* Product Description */
+.collections .product-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #777;
+  margin: 0 0 10px;
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Product Price */
+.collections .product-card h4 {
+  font-size: 19px;
+  color: #111;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+/* Buy Now Button */
+.collections .product-card button {
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 7px;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.collections .product-card button:hover {
+  background: #444;
+}
+
+.collections .product-card button:active {
+  transform: scale(0.97);
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .collections {
+    padding: 35px 25px;
+  }
+
+  .collections .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .collections .product-image {
+    height: 230px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .collections {
+    padding: 28px 18px;
+  }
+
+  .collections h2 {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .collections .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .collections .product-card {
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .collections .product-image {
+    height: 185px;
+    margin-bottom: 10px;
+  }
+
+  .collections .product-card h3 {
+    font-size: 15px;
+  }
+
+  .collections .product-card h4 {
+    font-size: 17px;
+  }
+
+  .collections .product-card button {
+    padding: 10px 6px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .collections {
+    padding: 22px 12px;
+  }
+
+  .collections h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+
+  .collections .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .collections .product-card {
+    padding: 7px;
+    border-radius: 9px;
+  }
+
+  .collections .product-image {
+    width: 100%;
+    height: 145px;
+    object-fit: contain;
+    margin-bottom: 9px;
+  }
+
+  .collections .product-card h3 {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+
+  .collections .product-card p {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  .collections .product-card h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .collections .product-card button {
+    padding: 10px 5px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 350px) {
+  .collections {
+    padding: 18px 8px;
+  }
+
+  .collections .product-grid {
+    gap: 8px;
+  }
+
+  .collections .product-image {
+    height: 120px;
+  }
+
+  .collections .product-card h3 {
+    font-size: 12px;
+  }
+
+  .collections .product-card h4 {
+    font-size: 14px;
+  }
+
+  .collections .product-card button {
+    font-size: 11px;
+  }
+}
